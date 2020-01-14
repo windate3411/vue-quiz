@@ -46,6 +46,11 @@ export default {
         this.correctNums++;
       }
       this.totalNums++;
+      if (this.totalNums === 10) {
+        confirm("Do you want to try again?")
+          ? this.startGame()
+          : alert("thx for playing!");
+      }
     },
     startGame() {
       fetch(
@@ -61,6 +66,8 @@ export default {
           this.questions = jsonData.results;
           console.log(jsonData);
         });
+      this.correctNums = 0;
+      this.totalNums = 0;
     }
   }
 };
