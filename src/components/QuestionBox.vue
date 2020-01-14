@@ -19,7 +19,12 @@
         @click="submitAnswer"
         :disabled="selectedIndex===null || answered ===true"
       >Submit</b-button>
-      <b-button variant="success" href="#" @click="next">Next</b-button>
+      <b-button
+        variant="success"
+        href="#"
+        @click="next"
+        :disabled="totalNums===10 || !answered"
+      >Next</b-button>
     </b-jumbotron>
   </div>
 </template>
@@ -30,7 +35,8 @@ export default {
   props: {
     currentQuestion: Object,
     next: Function,
-    increment: Function
+    increment: Function,
+    totalNums: Number
   },
   data() {
     return {

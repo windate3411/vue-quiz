@@ -9,6 +9,7 @@
             :currentQuestion="questions[index]"
             :next="next"
             :increment="increment"
+            :totalNums="totalNums"
           />
         </b-col>
       </b-row>
@@ -68,6 +69,7 @@ export default {
         });
       this.correctNums = 0;
       this.totalNums = 0;
+      this.index = 0;
     }
   }
 };
