@@ -2,7 +2,7 @@
   <div id="app">
     <Header :correctNums="correctNums" :totalNums="totalNums" />
     <b-container class="bv-example-row">
-      <b-row>
+      <b-row class="mt-5">
         <b-col sm="6" offset="3">
           <QuestionBox
             v-if="questions.length"
@@ -83,5 +83,10 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
 }
 </style>

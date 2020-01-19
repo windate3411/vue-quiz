@@ -15,7 +15,8 @@
       <b-button
         variant="primary"
         href="#"
-        class="mr-2"
+        class="mr-2 btn waves-effect waves-light"
+        type="submit"
         @click="submitAnswer"
         :disabled="selectedIndex===null || answered ===true"
       >Submit</b-button>
